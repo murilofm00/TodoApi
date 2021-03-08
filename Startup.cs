@@ -27,7 +27,8 @@ namespace TodoApi
                 });
             });
             services.AddDbContext<TodoContext>(opt =>
-                                               opt.UseInMemoryDatabase("TodoList"));
+                                               opt.UseSqlServer(@"Server=DESKTOP-EJOO4GU\SQLEXPRESS;Database=TodoAPI;Trusted_Connection=True;")
+                                               );
             services.AddControllers();
         }
 
